@@ -1,0 +1,10 @@
+name = "mirinda-backend"
+type = "javascript"
+account_id = "${CF_ACCOUNT_ID}"
+workers_dev = true
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "DEPLOY_KV"
+id = "${CF_KV_NAMESPACE_ID}"
