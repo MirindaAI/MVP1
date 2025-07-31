@@ -23,8 +23,7 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@1
         with:
-          apiKey: ${{ secrets.CF_API_KEY }}
-          email: ${{ secrets.CF_EMAIL }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: mirinda-apps
           directory: ./frontend/dist
