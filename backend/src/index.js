@@ -1,6 +1,7 @@
 export default {
   async fetch(request) {
     if (request.method === "POST") {
+      
       const body = await request.json();
       const { repoUrl, appName } = body;
       await DEPLOY_KV.put(`deploy:${appName}`, repoUrl);
